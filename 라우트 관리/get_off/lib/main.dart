@@ -12,7 +12,29 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Get Back Example',
-      home: HomePage(),
+      home: FirstPage(),
+    );
+  }
+}
+
+class FirstPage extends StatelessWidget {
+  const FirstPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Get.to(HomePage());
+          },
+<<<<<<< HEAD
+          child: Text('홈 페이지로 넘어가기'),
+=======
+          child: Text('다음 페이지로 넘어가기'),
+>>>>>>> main
+        ),
+      ),
     );
   }
 }
@@ -29,7 +51,11 @@ class HomePage extends StatelessWidget {
             Get.off(NextPage());
           },
           child: Text(
-            '다음 페이지로 넘어가기',
+<<<<<<< HEAD
+            '두번째 페이지로 넘어가기',
+=======
+            '홈 페이지로 넘어가기',
+>>>>>>> main
           ),
         ),
       ),
